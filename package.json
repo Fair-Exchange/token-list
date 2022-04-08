@@ -1,7 +1,7 @@
 {
-  "name": "@solana/spl-token-registry",
+  "name": "@safecoin/safe-token-registry",
   "version": "0.2.291",
-  "description": "Solana Token Registry",
+  "description": "Safecoin Token Registry",
   "main": "dist/main/index.js",
   "typings": "dist/main/index.d.ts",
   "module": "dist/module/index.js",

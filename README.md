@@ -1,70 +1,113 @@
-# @solana/spl-token-registry
+<p align="center">
+  <a href="https://solana.com">
+    <img alt="Safecoin" src="https://raw.githubusercontent.com/Fair-Exchange/safecoinwiki/master/Logos/SafeCoin/SafeCoin-Logo-with-text.png"/>
+  </a>
+</p>
 
-[![npm](https://img.shields.io/npm/v/@solana/spl-token-registry)](https://unpkg.com/@solana/spl-token-registry@latest/) [![GitHub license](https://img.shields.io/badge/license-APACHE-blue.svg)](https://github.com/solana-labs/token-list/blob/b3fa86b3fdd9c817139e38641d46c5a892542a52/LICENSE)
+[![twitter](https://img.shields.io/twitter/follow/safecoins?style=social)](https://twitter.com/safecoins)
 
-Solana Token Registry is a package that allows application to query for list of tokens.
-The JSON schema for the tokens includes: chainId, address, name, decimals, symbol, logoURI (optional), tags (optional), and custom extensions metadata.
 
-## Installation
+# Building
+
+## **1. Install rustc, cargo and rustfmt.**
 
 ```bash
-npm install @solana/spl-token-registry
+$ curl https://sh.rustup.rs -sSf | sh
+$ source $HOME/.cargo/env
+$ rustup component add rustfmt
 ```
+
+Please make sure you are always using the latest stable rust version by running:
 
 ```bash
-yarn add @solana/spl-token-registry
+$ rustup update
 ```
 
-## Examples
+On Linux systems you may need to install libssl-dev, pkg-config, zlib1g-dev, etc.  On Ubuntu:
 
-### Query available tokens
-
-```typescript
-new TokenListProvider().resolve().then((tokens) => {
-  const tokenList = tokens.filterByClusterSlug('mainnet-beta').getList();
-  console.log(tokenList);
-});
+```bash
+$ sudo apt-get update
+$ sudo apt-get install libssl-dev libudev-dev pkg-config zlib1g-dev llvm clang make
 ```
 
-### Render icon for token in React
+## **2. Download the source code.**
 
-```typescript jsx
-import React, { useEffect, useState } from 'react';
-import { TokenListProvider, TokenInfo } from '@solana/spl-token-registry';
-
-
-export const Icon = (props: { mint: string }) => {
-  const [tokenMap, setTokenMap] = useState<Map<string, TokenInfo>>(new Map());
-
-  useEffect(() => {
-    new TokenListProvider().resolve().then(tokens => {
-      const tokenList = tokens.filterByChainId(ENV.MainnetBeta).getList();
-
-      setTokenMap(tokenList.reduce((map, item) => {
-        map.set(item.address, item);
-        return map;
-      },new Map()));
-    });
-  }, [setTokenMap]);
-
-  const token = tokenMap.get(props.mint);
-  if (!token || !token.logoURI) return null;
-
-  return (<img src={token.logoURI} />);
-
+```bash
+$ git clone https://github.com/Fair-Exchange/Safecoin.git
+$ cd Safecoin
 ```
 
-## Adding new token
+## **3. Build.**
 
-Submit PR with changes to JSON file `src/tokens/solana.tokenlist.json`
+```bash
+$ cargo build
+```
 
-Please follow the Uniswap Token List specification found here: https://github.com/Uniswap/token-lists
+## **4. Run a minimal local cluster.**
+```bash
+$ ./run.sh
+```
+
+# Testing
+
+**Run the test suite:**
+
+```bash
+$ cargo test
+```
+
+### Starting a local testnet
+Start your own testnet locally, instructions are in the [online docs](https://docs.solana.com/cluster/bench-tps).
+
+### Accessing the remote development cluster
+* `devnet` - stable public cluster for development accessible via
+devnet.safecoin.org. Runs 24/7. Learn more about the [public clusters](https://docs.solana.com/clusters)
+
+# Benchmarking
+
+First install the nightly build of rustc. `cargo bench` requires use of the
+unstable features only available in the nightly build.
+
+```bash
+$ rustup install nightly
+```
+
+Run the benchmarks:
+
+```bash
+$ cargo +nightly bench
+```
+
+# Release Process
+
+The release process for this project is described [here](RELEASE.md).
+
+# Code coverage
+
+To generate code coverage statistics:
+
+```bash
+$ scripts/coverage.sh
+$ open target/cov/lcov-local/index.html
+```
+
+Why coverage? While most see coverage as a code quality metric, we see it primarily as a developer
+productivity metric. When a developer makes a change to the codebase, presumably it's a *solution* to
+some problem.  Our unit-test suite is how we encode the set of *problems* the codebase solves. Running
+the test suite should indicate that your change didn't *infringe* on anyone else's solutions. Adding a
+test *protects* your solution from future changes. Say you don't understand why a line of code exists,
+try deleting it and running the unit-tests. The nearest test failure should tell you what problem
+was solved by that code. If no test fails, go ahead and submit a Pull Request that asks, "what
+problem is solved by this code?" On the other hand, if a test does fail and you can think of a
+better way to solve the same problem, a Pull Request with your solution would most certainly be
+welcome! Likewise, if rewriting a test can better communicate what code it's protecting, please
+send us that patch!
 
 # Disclaimer
 
 All claims, content, designs, algorithms, estimates, roadmaps,
 specifications, and performance measurements described in this project
-are done with the Solana Foundation's ("SF") good faith efforts. It is up to
+are done with the Solana Foundation's ("SF") best efforts. It is up to
 the reader to check and validate their accuracy and truthfulness.
 Furthermore nothing in this project constitutes a solicitation for
 investment.
@@ -72,7 +115,7 @@ investment.
 Any content produced by SF or developer resources that SF provides, are
 for educational and inspiration purposes only. SF does not encourage,
 induce or sanction the deployment, integration or use of any such
-applications (including the code comprising the Solana blockchain
+applications (including the code comprising the Safecoin blockchain
 protocol) in violation of applicable laws or regulations and hereby
 prohibits any such deployment, integration or use. This includes use of
 any such applications by the reader (a) in violation of export control
@@ -89,14 +132,14 @@ prohibit U.S. persons (and other persons that are subject to such laws)
 from transacting with persons in certain countries and territories or
 that are on the SDN list. As a project based primarily on open-source
 software, it is possible that such sanctioned persons may nevertheless
-bypass prohibitions, obtain the code comprising the Solana blockchain
+bypass prohibitions, obtain the code comprising the Safecoin blockchain
 protocol (or other project code or applications) and deploy, integrate,
 or otherwise use it. Accordingly, there is a risk to individuals that
-other persons using the Solana blockchain protocol may be sanctioned
+other persons using the Safecoin blockchain protocol may be sanctioned
 persons and that transactions with such persons would be a violation of
 U.S. export controls and sanctions law. This risk applies to
 individuals, organizations, and other ecosystem participants that
-deploy, integrate, or use the Solana blockchain protocol code directly
-(e.g., as a node operator), and individuals that transact on the Solana
+deploy, integrate, or use the Safecoin blockchain protocol code directly
+(e.g., as a node operator), and individuals that transact on the Safecoin
 blockchain through light clients, third party interfaces, and/or wallet
 software.

@@ -3,7 +3,7 @@ https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/6Jd
       "chainId": 101,
       "address": "6JdcMdhqgCtcP4U9tieRqmKLhPLxRMLC67QfmdXAJBvZ",
       "symbol": "KITTY",
-      "name": "Kitty Solana",
+      "name": "Kitty Safecoin",
       "decimals": 9,
       "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/6JdcMdhqgCtcP4U9tieRqmKLhPLxRMLC67QfmdXAJBvZ/logo.png",
       "tags": [

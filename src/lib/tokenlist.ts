@@ -103,11 +103,11 @@ const queryJsonFiles = async (files: string[]) => {
 export enum Strategy {
   GitHub = 'GitHub',
   Static = 'Static',
-  Solana = 'Solana',
+  Safecoin = 'Safecoin',
   CDN = 'CDN',
 }
 
-export class SolanaTokenListResolutionStrategy {
+export class SafecoinTokenListResolutionStrategy {
   resolve = () => {
     throw new Error(`Not Implemented Yet.`);
   };
@@ -123,7 +123,7 @@ export class TokenListProvider {
   static strategies = {
     [Strategy.GitHub]: new GitHubTokenListResolutionStrategy(),
     [Strategy.Static]: new StaticTokenListResolutionStrategy(),
-    [Strategy.Solana]: new SolanaTokenListResolutionStrategy(),
+    [Strategy.Safecoin]: new SafecoinTokenListResolutionStrategy(),
     [Strategy.CDN]: new CDNTokenListResolutionStrategy(),
   };
 
