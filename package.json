@@ -1,6 +1,6 @@
 {
   "name": "@safecoin/safe-token-registry",
-  "version": "0.2.293",
+  "version": "0.2.294",
   "description": "Safecoin Token Registry",
   "main": "dist/main/index.js",
   "typings": "dist/main/index.d.ts",
@@ -39,7 +39,7 @@
     "reset-hard": "git clean -dfx && git reset --hard && npm i",
     "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish",
     "purge:cdn": "run-s purge:cdn:*",
-    "purge:cdn:solana": "npx req https://purge.jsdelivr.net/gh/solana-labs/token-list@main/src/tokens/solana.tokenlist.json"
+    "purge:cdn:solana": "npx req https://raw.githubusercontent.com/fair-exchange/token-list/main/src/tokens/solana.tokenlist.json"
   },
   "engines": {
     "node": ">=10"
