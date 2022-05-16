@@ -59,18 +59,16 @@
   "tokens": [
     {
       "chainId": 101,
-      "address": "2ah3bN48SKfRJbV93zEwfWz3FoUh44RUhRxDWFGzeaGL",
+      "address": "Safe111111111111111111111111111111111111111",
       "symbol": "SAFE",
       "name": "Safecoin",
       "decimals": 8,
       "logoURI": "https://raw.githubusercontent.com/Fair-Exchange/safecoinwiki/master/Logos/SafeCoin/256.png",
       "tags": [
-        "wrapped-wormhole2",
+        "wrapped-safebridge2"
       ],
       "extensions": {
-        "bridgeContract": "https://etherscan.io/address/0xdaf566020156297e2837fdfaa6fbba929a29461e",
-        "serumV3Usdc": "3zyMD67tUqSfuF8XTZjzBjqT6daEUfx2nk6YSVtmzDnD",
-        "serumV3Usdt": "2sedHoXJosRteBjP4FEV4U9TJ6JhHaNDgmkzm2dNtSHe",  
+        "bridgeContract": "https://etherscan.io/address/0x25f2984b0175941825bd398f366a04a8cb125650",
         "website": "https://safecoin.org",
         "twitter": "https://twitter.com/safecoin",
         "discord": "https://discord.gg/c6hWAkQ",
@@ -2127,18 +2125,23 @@
       "symbol": "SAFE",
       "name": "Wrapped SAFE",
       "decimals": 9,
-      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/Safe111111111111111111111111111111111111111/logo.png",
+      "logoURI": "https://raw.githubusercontent.com/Fair-Exchange/safecoinwiki/master/Logos/SafeCoin/256.png",
       "tags": [],
       "extensions": {
-        "website": "https://solana.com/",
-        "serumV3Usdc": "9wFFyRfZBsuAha4YcuxcXLKwMxJR43S7fPfQLusDBzvT",
-        "serumV3Usdt": "HWHvQhFmJB3NUcu1aihKmrKegfVxBEHzwVX6yZCKEsi1",
-        "coingeckoId": "solana"
+        "bridgeContract": "https://etherscan.io/address/0x25f2984b0175941825bd398f366a04a8cb125650",
+        "coingeckoId": "safe-coin-2",
+        "discord": "https://discord.gg/c6hWAkQ",
+        "facebook": "https://www.facebook.com/safecoins/",
+        "instagram": "https://www.instagram.com/safecoinproject/",
+        "medium": "https://safecoin.medium.com/",
+        "telegram": "https://t.me/SafeCoinEN",
+        "twitter": "https://twitter.com/safecoins",
+        "website": "https://safecoin.org"
       }
     },
     {
       "chainId": 101,
-      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "address": "Cs15wVAmfVBSNP7uWEQpAepuXoVpYU655HHSAftzKbn6",
       "symbol": "USDC",
       "name": "USD Coin",
       "decimals": 6,
@@ -2150,6 +2153,36 @@
         "website": "https://www.centre.io/",
         "coingeckoId": "usd-coin",
         "serumV3Usdt": "77quYg4MGneUdjgXCunt9GgM1usmrxKY31twEy3WHwcS"
+      }
+    },
+    {
+      "chainId": 101,
+      "address": "DSy77GspzC5mXyRqVYgsuQHEPy8GNhuZ37TAeu3useJZ",
+      "symbol": "FLUX",
+      "name": "Flux",
+      "decimals": 8,
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/FLUX1wa2GmbtSB6ZGi2pTNbVCw3zEeKnaPCkPtFXxqXe/logo.svg",
+      "tags": [
+        "web3",
+        "decentralized-cloud",
+        "masternodes",
+        "mineable",
+        "proof-of-work"
+      ],
+      "extensions": {
+        "description": "Flux is the cryptocurrency powering the Flux Ecosystem, including decentralized computational network. Flux gives users both institutional and private control over their cloud infrastructure in a decentralized manner.",
+        "medium": "https://fluxofficial.medium.com",
+        "discord": "https://discord.io/runonflux",
+        "telegram": "https://t.me/zelhub",
+        "facebook": "https://www.facebook.com/groups/runonflux",
+        "twitter": "https://twitter.com/RunOnFlux",
+        "reddit": "https://www.reddit.com/r/RunOnFlux",
+        "github": "https://github.com/runonflux",
+        "youtube": "https://www.youtube.com/channel/UCphbdfb1MXYgUPsdhQPcnGw",
+        "instagram": "https://www.instagram.com/flux_runonflux",
+        "twitch": "https://www.twitch.tv/runonflux",
+        "linkedin": "https://www.linkedin.com/company/flux-official/mycompany",
+        "website": "https://runonflux.io"
       }
     },
     {
@@ -10009,11 +10042,11 @@
       "symbol": "wSAFE",
       "name": "Wrapped SAFE",
       "decimals": 9,
-      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/Safe111111111111111111111111111111111111111/logo.png",
+      "logoURI": "https://raw.githubusercontent.com/Fair-Exchange/safecoinwiki/master/Logos/SafeCoin/256.png",
       "tags": [],
       "extensions": {
-        "website": "https://www.solana.com/",
-        "coingeckoId": "solana"
+        "website": "https://www.safecoin.org/",
+        "coingeckoId": "safe-coin-2"
       }
     },
     {
@@ -10151,10 +10184,10 @@
       "symbol": "SAFE",
       "name": "Wrapped SAFE",
       "decimals": 9,
-      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/Safe111111111111111111111111111111111111111/logo.png",
+      "logoURI": "https://raw.githubusercontent.com/Fair-Exchange/safecoinwiki/master/Logos/SafeCoin/256.png",
       "tags": [],
       "extensions": {
-        "coingeckoId": "solana"
+        "coingeckoId": "safe-coin-2"
       }
     },
     {
